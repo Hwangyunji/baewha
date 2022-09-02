@@ -1,0 +1,291 @@
+:root {
+    --main-color: #2285D6;
+    --sub-color: #E9F3FB;
+}
+
+/*초기 설정*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+/********본문시작*********/
+
+/* 메뉴와 로고가 들어가는 header */
+header {
+    width: 200px;
+    height: 100vh;
+    /* background: #ccc; */
+    position: fixed;
+    float: left;
+}
+
+/*로고*/
+.logo {
+    width: 100%;
+}
+
+/*로고이미지*/
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/*메인메뉴*/
+.menu {
+    width: 100%;
+    text-align: center;
+}
+
+.nav {
+    margin-top: 60px;
+}
+
+.nav>li {
+    width: 100%;
+    /* position 속성은 서브메뉴가 오른쪽에 나타날때 반드시 필요  */
+    position: relative;
+    margin-bottom: 20px;
+    outline: 1px solid red;
+}
+
+.nav>li>a {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+}
+
+.nav>li>a:hover {
+    background-color: #ff5733;
+    color: #222328;
+}
+
+.subMenu {
+    display: none;
+    /* 아래 사항은 서브메뉴가 오른쪽에 나타날때 반드시 필요 */
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    z-index: 1;
+}
+
+.subMenu>li>a {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    background: #444444;
+    color: #ffffff;
+}
+
+.subMenu>li>a:hover {
+    background-color: #555555;
+    color: #ff5733;
+}
+
+
+
+main {
+    position: absolute;
+    left: 200px;
+}
+
+/* .video {
+    width: 100%;
+    height: 100vh;
+} */
+
+.calendar {
+    display: flex;
+    height: 100px;
+    width: clac(100% - 100px);
+    background: var(--sub-color);
+}
+
+
+.calendar .col:nth-child(even) {
+    background: #fff;
+}
+
+.calendar .col:first-child,
+.calendar .col:last-child {
+    width: 191px;
+    background: var(--main-color);
+}
+
+.calendar .col {
+    display: flex;
+    justify-content: space-around;
+    width: 264px;
+    /* outline: 1px solid red; */
+}
+
+.calendar .col .dateStr {
+    display: flex;
+    padding: 23px 0;
+    /* outline: 1px solid rebeccapurple; */
+}
+
+.pdate,
+.schdStr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* outline: 1px solid seagreen; */
+}
+
+.pdateSim {
+    padding: 20px 0;
+}
+
+
+
+
+.contents {
+    margin: 0 200px;
+}
+
+.sub-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0 40px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--main-color);
+}
+
+.sub-title h4 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news ul li a {
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+}
+
+.news ul li p {
+    font-weight: 500;
+    /* font-size: 20px; */
+    padding: 20px 0 5px 0;
+}
+
+.news ul li span {
+    text-align: right;
+}
+
+
+.sub-title:nth-child(3) {
+    margin-bottom: 0;
+}
+
+.square {
+    display: flex;
+    width: 1320px;
+}
+
+.side {
+    width: 125px;
+    height: 366px;
+    background: var(--sub-color);
+}
+
+.side ul li {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 30px;
+    border-bottom: 1px solid #999999;
+}
+
+.square .notice {
+    display: flex;
+    justify-content: space-between;
+    width: 1195px;
+    margin: 0 80px;
+    /* outline: 1px solid red; */
+}
+
+.square .notice .sec {
+    width: 305px;
+    padding-top: 50px;
+}
+
+.square .notice .sec:nth-child(2) {
+    /* outline: 1px solid blue; */
+    padding: 0 30px;
+    margin: 50px 0;
+    border-width: 0px 2px;
+    border-style: solid;
+    border-color: #999999;
+}
+
+.sec .title {
+    font-size: 24px;
+    font-weight: 400;
+}
+.sec .content {
+    font-size: 16px;
+    font-weight: 300;
+    color: #333;
+    outline: 1px solid red;
+}
+.sec .date {
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    justify-content: right;
+}
+
+
+
+
+
+
+
+.section {
+    display: flex;
+}
+
+.gosns {
+    display: flex;
+    gap: 30px;
+}
+
+.banner {
+    margin-top: 80px;
+    padding-left: 55px;
+    gap: 9px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    background: #999;
+    color: #333;
+}
